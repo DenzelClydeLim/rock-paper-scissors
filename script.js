@@ -1,13 +1,3 @@
-/*
-SET randomNum and CALL Math.random and multiply by 3 added by 1
-CALL Math.floor of randomNum
-IF randomNum equals 1 THEN
-    SET move to "Rock"
-ELSEIF randomNum equals 2 THEN
-    SET move to "Paper"
-ELSE
-    SET move to "Scissors"
-*/
 function getComputerChoice() {
     let randomNum = Math.floor(Math.random() * 3 + 1);
     let move;
@@ -23,17 +13,12 @@ function getComputerChoice() {
     return move;
 }
 
-/*
-READ and SET input to choice
-CALL toUpperCase() on choice
-RETURN choice
-*/
-
 function getPlayerChoice() {
     let choice;
     while (choice !== "rock" && choice !== "paper" && choice !== "scissors") {
         choice = prompt("Rock, paper or scissors?").toLowerCase();
     }
+    console.log(`You picked: ${choice.charAt(0).toUpperCase() + choice.slice(1)}`);
     return choice;
 }
 
@@ -68,28 +53,24 @@ function playRound(playerMove, computerMove) {
 function playGame() {
     let i = 0;
     let result;
-    let score = 0;
+    let playerScore = 0;
+    let computerScore = 0;
     while (i < 5) {
         result = playRound(getPlayerChoice(), getComputerChoice());
         console.log(result);
-        result === "You won!" ? ++score : null;
-        console.log(`Score: ${score}`);
+        result === "You won!" ? ++playerScore : result === "You lost!" ? ++computerScore : null;
+        console.log(`Player Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
         i++;
     }
-    if (score >= 3) {
-        console.log("You are the champion!");
+    if (playerScore > computerScore) {
+        return "You are the champion!";
+    } else if (computerScore > playerScore) {
+        return "Computer wins!";
+    } else if (playerScore === computerScore) {
+        return "It's a tie! You're both winners";
     } else {
-        console.log("Computer wins!");
+        return "Woah! Nobody scored a point.";
     }
 }
-playGame();
-
-
-/*
-IF playerMove equals rock and computerMove equals scissors
-    THEN display "You won!"
-ELSE IF playerMove equals rock and computerMove equals paper
-    THEN display "You lost!"
-ELSE IF playerMove equals rock and computerMove equals rock
-    THEN display "Tie! No point gained!"
-*/
+console.log(playGame());
