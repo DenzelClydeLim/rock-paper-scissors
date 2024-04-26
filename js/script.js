@@ -13,14 +13,14 @@ function getComputerChoice() {
     return move;
 }
 
-function getPlayerChoice() {
+/* function getPlayerChoice() {
     let choice;
     while (choice !== "rock" && choice !== "paper" && choice !== "scissors") {
         choice = prompt("Rock, paper or scissors?").toLowerCase();
     }
     console.log(`You picked: ${choice.charAt(0).toUpperCase() + choice.slice(1)}`);
     return choice;
-}
+} */
 
 function playRound(playerMove, computerMove) {
     if (playerMove === "rock") {
@@ -50,6 +50,7 @@ function playRound(playerMove, computerMove) {
     }
 }
 
+
 function playGame() {
     let i = 0;
     let result;
@@ -69,8 +70,6 @@ function playGame() {
         return "Computer wins!";
     } else if (playerScore === computerScore) {
         return "It's a tie! You're both winners";
-    } else {
-        return "Woah! Nobody scored a point.";
-    }
+    } return "Woah! Nobody scored a point.";
 }
 console.log(playGame());

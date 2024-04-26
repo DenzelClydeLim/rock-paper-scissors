@@ -1,0 +1,63 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    height: 500px;
+}
+
+.playerMove {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.playerMove img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.playerMove button {
+    padding: 0;
+    border: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.playerMove button:hover {
+    border: 3px solid yellow;
+}
+
+#rockBtn {
+    background-image: url('../images/street-fighter-rock.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#paperBtn {
+    background-image: url('../images/street-fighter-paper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#scissorsBtn {
+    background-image: url('../images/street-fighter-scissors.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgText {
+    font-size: 10em;
+    font-family: Brush Script MT;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.whiteText {
+    color: white;
+}
