@@ -1,0 +1,220 @@
+body {
+    background-color: #B5DFCA;
+    font-family: 'Poppins';
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #B5DFCA;
+}
+
+#navBarLeft {
+    flex: 1;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+
+#navBarGameIcon {
+    background-image: url("./images/handshake-icon.svg");
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+#navBarGameIcon:hover {
+    animation: wave 2s;
+    transform-origin: 70% 70%;
+    cursor: pointer;
+}
+
+.navBarRestartBtn {
+    background-color: #B5DFCA;
+    margin-left: 10px;
+    font-family: 'Poppins';
+}
+
+.navBarRestartBtn:hover {
+    background-color: #005377;
+    cursor: pointer;
+    color: white;
+}
+
+
+#navBarMid {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+#navBarMid>a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+#navBarMid>a:hover::after {
+    width: 100%;
+}
+
+#navBarRight {
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+}
+
+#navBarProfileName {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#navBarProfilePic {
+    background-image: url("./images/denzelclydelim-pfp.png");
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+#playSect {
+    margin-top: 100px;
+}
+
+#playSectTitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#playSectMoveContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#playSectMoveContainer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#playSectMoveContainer>div>button {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: border 0.5s;
+}
+
+#playSectMoveContainer>div>button:hover {
+    border: 3px solid yellow;
+}
+
+#playSectRockBtn {
+    background-image: url("./images/rps-rock-icon.jpg");
+}
+
+#playSectPaperBtn {
+    background-image: url("./images/rps-hand-icon.jpg");
+}
+
+
+#playSectScissorsBtn {
+    background-image: url("./images/rps-scissors-icon.jpg");
+}
+
+#oppSect {
+    margin-top: 50px;
+}
+
+#oppSectTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+#oppSectMoveContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#oppSectImg {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: src 1s;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

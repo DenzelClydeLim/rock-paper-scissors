@@ -4,10 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    <nav id="navBar">
+        <div id="navBarLeft">
+            <button id="navBarGameIcon"></button>
+            <div id="navBarGameTitle">TriStrike</div>
+        </div>
+        <div id="navBarMid">
+            <a href="." id="navBarPlay">Play</a>
+            <a href="./theme" id="navBarChoose">Choose</a>
+            <a href="./store" id="navBarStore">Store</a>
+        </div>
+        <div id="navBarRight">
+            <div id="navBarProfileName">
+                thenamesclyde
+            </div>
+            <button id="navBarProfilePic">
+            </button>
+        </div>
+    </nav>
+    <section id="playSect">
+        <div id="playSectTitle">
+            Time to choose your fighter!
+        </div>
+        <div id="playSectMoveContainer">
+            <div id="playSectRockContainer">
+                <button id="playSectRockBtn"></button>
+                <div>Rock</div>
+            </div>
+            <div id="playSectPaperContainer">
+                <button id="playSectPaperBtn"></button>
+                <div>Paper</div>
+            </div>
+            <div id="playSectScissorsContainer">
+                <button id="playSectScissorsBtn"></button>
+                <div>Scissors</div>
+            </div>
+        </div>
+    </section>
+    <section id="oppSect">
+        <div id="oppSectTitle">Neeko</div>
+        <div id="oppSectMoveContainer">
+            <img src="./images/cat-bored-pfp.jpg" alt="Opponent Profile Pictures" id="oppSectImg">
+            <div id="oppSectMove">
+                Neeko is waiting for your move...
+            </div>
+            <div id="oppSectMatchNum">
+                All is at peace.
+            </div>
+            <div id="oppSectScore">Player: 0 | Neeko: 0</div>
+        </div>
+    </section>
 </body>
 
 </html>
